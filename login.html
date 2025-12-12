@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-Raha</title>
+    <link rel="icon" type="jpeg" href="./download (1).png">
+    <link rel="stylesheet" href="./login.css">
+</head>
+<body>
+
+<div class="container">
+
+    <div class="box login-box">
+        <div class="left">
+            <h1>WELCOME BACK!</h1>
+            <p>We’re happy to have you return. If you need any help, we’re always here.</p>
+        </div>
+
+        <div class="right">
+            <h2>Login</h2>
+            <form action="login.php" method="post">
+                <div class="input-box">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                    <span class="icon">👤</span>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                    <span class="icon">🔒</span>
+                </div>
+
+                <button type="submit" name="login" class="btn"><strong>Login</strong></button>
+
+                <p class="switch">Don’t have an account? <a href="#" id="toSignup">Sign Up</a></p>
+            </form>
+        </div>
+    </div>
+
+    <div class="box signup-box hidden">
+        <div class="left">
+            <h1>WELCOME!</h1>
+            <p>We're delighted to have you here. If you need any assistance, feel free to reach out.</p>
+        </div>
+
+        <div class="right">
+            <h2>Register</h2>
+            <form action="register.php" method="post">
+                <div class="input-box">
+                    <input type="text" name="username" required>
+                    <label>Username</label>
+                    <span class="icon">👤</span>
+                </div>
+
+                <div class="input-box">
+                    <input type="email" name="email" required>
+                    <label>Email</label>
+                    <span class="icon">📧</span>
+                </div>
+
+                <div class="input-box">
+                    <input type="password" name="password" required>
+                    <label>Password</label>
+                    <span class="icon">🔒</span>
+                </div>
+
+                <button type="submit" name="Register" class="btn"><strong>Register</strong></button>
+
+                <p class="switch">Already have an account? <a href="#" id="toLogin">Sign In</a></p>
+            </form>
+        </div>
+    </div>
+
+</div>
+
+<script>
+const loginBox = document.querySelector(".login-box");
+const signupBox = document.querySelector(".signup-box");
+const toSignup = document.getElementById("toSignup");
+const toLogin = document.getElementById("toLogin");
+
+toSignup.onclick = () => {
+    loginBox.classList.add("hidden");
+    signupBox.classList.remove("hidden");
+};
+
+toLogin.onclick = () => {
+    signupBox.classList.add("hidden");
+    loginBox.classList.remove("hidden");
+};
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+
+  const h1s = document.querySelectorAll(".left h1, .right h2");
+  h1s.forEach((h1, i) => {
+    h1.style.opacity = 0;
+    h1.style.transform = "translateY(-30px) scale(0.9)";
+    h1.style.transition = `all 1s ease-out ${i*0.3}s`;
+    setTimeout(() => {
+      h1.style.opacity = 1;
+      h1.style.transform = "translateY(0) scale(1)";
+    }, 300);
+  });
+
+  const inputs = document.querySelectorAll(".input-box");
+  inputs.forEach((input, i) => {
+    input.style.opacity = 0;
+    input.style.transform = "translateX(-50px)";
+    input.style.transition = `all 0.8s ease-out ${i*0.2}s`;
+    setTimeout(() => {
+      input.style.opacity = 1;
+      input.style.transform = "translateX(0)";
+    }, 800);
+  });
+
+  const btns = document.querySelectorAll(".btn");
+  btns.forEach((btn, i) => {
+    btn.style.opacity = 0;
+    btn.style.transform = "scale(0.8)";
+    btn.style.transition = `all 0.8s ease-out ${i*0.3}s`;
+    setTimeout(() => {
+      btn.style.opacity = 1;
+      btn.style.transform = "scale(1)";
+    }, 1200);
+
+    btn.addEventListener("mouseenter", () => {
+      btn.style.transform = "scale(1.1)";
+      btn.style.transition = "transform 0.3s ease";
+    });
+    btn.addEventListener("mouseleave", () => {
+      btn.style.transform = "scale(1)";
+      btn.style.transition = "transform 0.3s ease";
+    });
+  });
+
+  const switches = document.querySelectorAll(".switch a");
+  switches.forEach((link, i) => {
+    link.style.opacity = 0;
+    link.style.transform = "translateY(20px)";
+    link.style.transition = `all 0.8s ease-out ${i*0.3}s`;
+    setTimeout(() => {
+      link.style.opacity = 1;
+      link.style.transform = "translateY(0)";
+    }, 1600);
+  });
+
+});
+</script>
+
+</body>
+</html>

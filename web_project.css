@@ -1,0 +1,170 @@
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: url(./download.gif);
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.preview__header {
+  background-color: #111f2e;    
+  color:#fcd471;                 
+  height: 60px;                 
+  display: flex;                
+  justify-content: space-between;
+  align-items: center;           
+  padding: 0 40px;              
+  position: fixed;               
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;                 
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+@media(max-width:900px){
+  .preview__header{font-size: 10px;}
+
+}
+
+
+.preview__Al-Raha-logo {
+  width: 150px;
+  height: 50px;
+  background-image:url(./pngtree-gold-car-logo-design-png-image_4357566-removebg-preview.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+.preview__header span {
+  vertical-align: middle;
+}
+h1{
+color: wheat;
+
+margin-top: 70px;
+font-family: "Fira Sans", sans-serif;
+margin-left: 55px;
+}
+
+#navigation {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  margin-top: -20px;
+  font-size: 30px;
+  position: relative;
+}
+
+#navigation li {
+  position: relative;
+  margin: 0;
+  justify-content: center;
+}
+
+#navigation {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  margin-top: -20px;
+  font-size: 30px;
+  position: relative;
+}
+
+#navigation li {
+  position: relative;
+}
+#navigation a {
+  text-decoration: none;
+  color: wheat;
+  font-weight: bold;
+  margin: 0 15px;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+#navigation {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  margin-top: -20px;
+  font-size: 30px;
+  position: relative;
+}
+#navigation li {
+  position: relative;
+}
+#navigation a {
+  text-decoration: none;
+  color: wheat;
+  font-weight: bold;
+  margin: 0 15px;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+#navigation a:hover {
+  color: #fff7e6;
+  text-shadow: 0 0 10px #ffb347, 0 0 20px #ffb347, 0 0 30px #ffcc33;
+}
+#navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ffcc33, #ff8800);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffcc33, 0 0 20px #ff8800, 0 0 30px #ff8800;
+  transition: width 0.4s ease-in-out;
+}
+#navigation a:hover::after {
+  width: 100%;
+}
+#navigation a.active {
+  color: #ffd580;
+  text-shadow: 0 0 10px #ffcc33, 0 0 25px #ff8800;
+}
+h2{
+  text-align: center;
+  margin-top: 100px;
+  justify-content: center;
+  font-size: 60px;
+  color: wheat;
+font-family: "Fira Sans", sans-serif;
+}
+.gradient-text {
+  
+  background: linear-gradient(to right, rgb(197, 168, 113), rgb(233, 223, 206)); 
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent; 
+  font-weight: bold;
+  font-size: 60px;
+  text-align: center;
+}
+
+p{
+  color: wheat;
+  justify-content: center;
+  text-align: center;
+  font-size: 20px;
+  margin-top: -25px;
+}

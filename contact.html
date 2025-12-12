@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="./contact.css">
+    <link rel="icon" type="jpeg" href="./download (1).png">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aguafina+Script&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Goblin+One&family=Italianno&family=Lugrasimo&display=swap" rel="stylesheet">
+</head>
+<body class="full-screen-preview">
+    <div class="preview__header">
+        <a href="./web_project.html">
+            <div class="preview__Al-Raha-logo"></div>
+        </a>
+        AL-Raha Company
+    </div>
+
+    <h1>AL-Raha</h1>
+    <nav>
+        <ul id="navigation">
+            <li><a href="./web_project.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./explore.html">Explore</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-container">
+        <div class="form-box">
+            <h2>Book Your Car</h2>
+            <form id="bookingForm" action="carrental.php" method="post">
+                <div class="input-box">
+                    <label><strong>Full Name</strong></label>
+                    <input type="text" name="fullname" placeholder="Enter your name" required>
+                </div>
+                <div class="input-box">
+                    <label><strong>Email</strong></label>
+                    <input type="email" name="email" placeholder="Enter your email" required>
+                </div>
+                <div class="input-box">
+                    <label><strong>Phone Number</strong></label>
+                    <input type="text" name="phone" placeholder="Enter your phone number" required pattern="\d{10}" title="Phone number must be 10 digits">
+                </div>
+                <div class="input-box">
+                    <label><strong>Car Type</strong></label>
+                    <input type="text" name="car_type" placeholder="Car model you want" required>
+                </div>
+                <div class="input-box">
+                    <label><strong>Pick-up Date</strong></label>
+                    <input type="date" name="pickup_date" id="pickup_date" required>
+                </div>
+                <div class="input-box">
+                    <label><strong>Return Date</strong></label>
+                    <input type="date" name="return_date" id="return_date" required>
+                </div>
+                <button type="submit" class="btn"><strong>Send Request</strong></button>
+            </form>
+        </div>
+    </div>
+
+    <div id="toast"></div>
+
+    <script>
+        const form = document.getElementById('bookingForm');
+        const toast = document.getElementById('toast');
+
+        form.addEventListener('submit', function(e){
+            e.preventDefault();
+
+            const today = new Date();
+            today.setHours(0,0,0,0);
+            const pickup = new Date(form.pickup_date.value);
+            const returnDate = new Date(form.return_date.value);
+
+            if(pickup < today){
+                showToast("Pick-up date must be after today!");
+                return;
+            }
+            if(returnDate <= pickup){
+                showToast("Return date must be after pick-up date!");
+                return;
+            }
+
+            const formData = new FormData(form);
+
+            fetch('carrental.php', {
+                method: 'POST',
+                body: formData
+            })
+            .then(response => response.text())
+            .then(data => {
+                showToast("Booking saved successfully!");
+                form.reset();
+            })
+            .catch(error => {
+                showToast("Error saving booking!");
+            });
+        });
+
+        function showToast(msg){
+            toast.innerText = msg;
+            toast.className = "show";
+            setTimeout(()=>{ toast.className = toast.className.replace("show",""); }, 3000);
+        }
+    </script>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const h1 = document.querySelector("h1");
+        if(h1){
+            h1.style.opacity = 0;
+            h1.style.transform = "translateY(-50px) scale(0.8)";
+            h1.style.transition = "all 1s ease-out";
+            setTimeout(() => {
+                h1.style.opacity = 1;
+                h1.style.transform = "translateY(0) scale(1)";
+            }, 300);
+        }
+
+        const nav = document.querySelector("nav");
+        if(nav){
+            nav.style.opacity = 0;
+            nav.style.transform = "translateY(-20px)";
+            nav.style.transition = "all 1s ease-out";
+            setTimeout(() => {
+                nav.style.opacity = 1;
+                nav.style.transform = "translateY(0)";
+            }, 600);
+        }
+
+        const formBox = document.querySelector(".form-box");
+        if(formBox){
+            formBox.style.opacity = 0;
+            formBox.style.transform = "translateY(50px)";
+            formBox.style.transition = "all 1s ease-out";
+            setTimeout(() => {
+                formBox.style.opacity = 1;
+                formBox.style.transform = "translateY(0)";
+            }, 900);
+        }
+
+        const inputs = document.querySelectorAll(".input-box");
+        inputs.forEach((input, i) => {
+            input.style.opacity = 0;
+            input.style.transform = "translateX(-50px)";
+            input.style.transition = `all 0.8s ease-out ${i*0.2}s`;
+            setTimeout(() => {
+                input.style.opacity = 1;
+                input.style.transform = "translateX(0)";
+            }, 1200);
+        });
+
+        const btn = document.querySelector(".btn");
+        if(btn){
+            btn.style.opacity = 0;
+            btn.style.transform = "scale(0.8)";
+            btn.style.transition = "all 0.8s ease-out";
+            setTimeout(() => {
+                btn.style.opacity = 1;
+                btn.style.transform = "scale(1)";
+            }, 1600);
+
+            btn.addEventListener("mouseenter", () => {
+                btn.style.transform = "scale(1.1)";
+                btn.style.transition = "transform 0.3s ease";
+            });
+            btn.addEventListener("mouseleave", () => {
+                btn.style.transform = "scale(1)";
+                btn.style.transition = "transform 0.3s ease";
+            });
+        }
+
+        if(toast){
+            toast.style.opacity = 0;
+            toast.style.transform = "translateY(20px)";
+            toast.style.transition = "all 0.5s ease-out";
+        }
+    });
+    </script>
+
+</body>
+</html>

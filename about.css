@@ -1,0 +1,320 @@
+.preview__header {
+  background-color: #111f2e;
+  color: #fcd471;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 20px;
+  font-weight: bold;
+  letter-spacing: 0.5px;
+}
+
+h1 {
+  color: wheat;
+  margin-top: 70px;
+  font-family: "Fira Sans", sans-serif;
+  margin-left: 55px;
+}
+
+.preview__Al-Raha-logo {
+  width: 150px;
+  height: 50px;
+  background-image: url(./pngtree-gold-car-logo-design-png-image_4357566-removebg-preview.png);
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  margin-right: 10px;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+#navigation {
+  list-style: none;
+  display: flex;
+  gap: 25px;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  margin-top: -20px;
+  font-size: 30px;
+  position: relative;
+}
+
+#navigation li {
+  position: relative;
+}
+
+#navigation a {
+  text-decoration: none;
+  color: wheat;
+  font-weight: bold;
+  margin: 0 15px;
+  position: relative;
+  padding-bottom: 6px;
+  transition: color 0.3s ease;
+}
+
+#navigation a:hover {
+  color: #fff7e6;
+  text-shadow: 0 0 10px #ffb347, 0 0 20px #ffb347, 0 0 30px #ffcc33;
+}
+
+#navigation a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, #ffcc33, #ff8800);
+  border-radius: 10px;
+  box-shadow: 0 0 10px #ffcc33, 0 0 20px #ff8800, 0 0 30px #ff8800;
+  transition: width 0.4s ease-in-out;
+}
+
+#navigation a:hover::after {
+  width: 100%;
+}
+
+#navigation a.active {
+  color: #ffd580;
+  text-shadow: 0 0 10px #ffcc33, 0 0 25px #ff8800;
+}
+
+#navigation a.active::after {
+  width: 100%;
+  box-shadow: 0 0 15px #ffcc33, 0 0 25px #ff8800, 0 0 40px #ffaa00;
+}
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+}
+body {
+  background-image: url(./46b422659e88a0ccad759e6d69dd252e.jpg);
+  background-repeat: no-repeat;
+background-size: cover;   
+background-position: center;
+background-attachment: fixed;
+}
+
+.page-container {
+  background-color: rgba(255, 232, 188, 0.459);
+  padding: 50px 50px;
+  border-radius: 20px;
+  max-width: 1000px;
+  width: 100%;
+  height: 400px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  text-align: center;
+  justify-content: center;
+  margin-left: 100px;
+  margin-top: 90px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  background-blend-mode: overlay;
+}
+
+.page-container img {
+  width: 500px;
+  height: 498px;
+  object-fit: cover;
+  margin-top: -49px;
+  margin-right: 500px;
+}
+
+.textt h2 {
+  margin-top: -350px;
+  font-size: 40px;
+  margin-left: 500px;
+  color: wheat;
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.text-box p {
+  margin-top: -300px;
+  font-size: 18px;
+  text-align: center;
+  margin-left: 530px;
+  line-height: 30px;
+  color: #3f3d2b;
+  font-family: "Momo Trust Display", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
+.containers {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 600px;
+  margin-left: 30px;
+  width: 100%;
+  overflow: visible;
+}
+
+.card {
+  position: relative;
+  transition: 0.5s ease;
+  cursor: pointer;
+}
+
+.containers img {
+  width: 300px;
+  border-radius: 10px;
+  border: 3px ridge wheat;
+  margin: 10px;
+  transition: 0.5s ease;
+  object-fit: cover;
+}
+
+.card-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: wheat;
+  font-size: 30px;
+  text-align: center;
+  opacity: 0;
+  transition: 0.5s ease;
+  font-weight: bold;
+}
+
+.card:hover img {
+  opacity: 0.2;
+  transform: scale(1.1);
+}
+
+.card:hover .card-text {
+  opacity: 1;
+}
+
+.containers:hover .card:hover {
+  opacity: 1;
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(56, 54, 54, 0.4);
+}
+
+.map-section {
+  margin-top: 80px;
+}
+
+.map-section h2 {
+  font-size: 40px;
+  background: linear-gradient(to right, rgb(197, 168, 113), rgb(233, 223, 206));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.map-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 90px;
+}
+
+.map-container iframe {
+  width: 90%;
+  height: 450px;
+  border: none;
+  border-radius: 20px;
+  box-shadow: 0 0 25px rgba(197, 168, 113, 0.3);
+}
+
+h3 {
+  text-align: center;
+  font-size: 50px;
+  color: wheat;
+  
+}
+
+.team-section {
+  text-align: center;
+   padding: 60px; 
+  color: white;
+} 
+
+.team-section h4 {
+  font-size: 50px;
+  color: #c5a871;
+}
+
+.team-section p {
+  font-size: 15pt;
+  color: #ccc;
+  max-width: 600px;
+  margin: 0 auto 50px auto;
+  line-height: 1.6;
+  
+}
+
+.team-container {
+    display: flex;
+    flex-direction: column;
+    gap: 100px; 
+    align-items: center; 
+    margin-top: 95px;
+}
+
+.team-row,
+.team-row-second {
+    display: flex;
+    flex-direction: row;
+    justify-content: center; 
+}
+
+
+.team-row {
+    margin-left: 380px;
+}
+.team-row p{
+  margin-right: 350px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.team-row-second{
+   margin-left: 380px;
+}
+.team-row-second p{
+ margin-right: 350px;
+  margin-top: 20px;
+  font-size: 20px;
+}
+.team-container img {
+    display: block; 
+    max-width: 100%; 
+}
+
+.team-card img {
+  width: 130px;
+  height: 130px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 3px solid #c5a871;
+  transition: 0.3s ease;
+}
+
+.team-card img:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(197, 168, 113, 0.4);
+}
+footer {
+  text-align: center;
+  padding: 15px;
+  color: wheat;
+  border-top: 1px solid wheat;
+}

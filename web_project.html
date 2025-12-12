@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AL-Raha</title>
+    <link rel="stylesheet" href="./web_project.css">
+    <link rel="icon" type="jpeg" href="./download (1).png">
+    <link href="https://fonts.googleapis.com/css2?family=Aguafina+Script&family=Goblin+One&family=Italianno&family=Lugrasimo&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aguafina+Script&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Goblin+One&family=Italianno&family=Lugrasimo&display=swap" rel="stylesheet"> 
+</head>
+<body class="full-screen-preview">
+<div class="preview__header">
+    <a href="./web_project.html"><div class="preview__Al-Raha-logo"></div></a> 
+    AL-Raha Company 
+</div>
+<h1> AL-Raha </h1>
+<nav>
+    <ul id="navigation">
+        <li><a href="./web_project.html">Home</a></li>
+        <li><a href="./about.html">About</a></li>
+        <li><a href="./contact.html">Contact</a></li>
+        <li><a href="./explore.html">Explore</a></li>
+    </ul>
+</nav>
+
+<h2 class="gradient-text">
+    Drive your dream <br>today , rent the car that<br> takes you further
+</h2>
+<p>Make every mile memorable! We make car rental simple , affordable, and exciting <br> so you can focus on what matters most: your journey, your way.</p>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const headline = document.querySelector("h2.gradient-text");
+    const paragraph = document.querySelector("p");
+
+    headline.style.opacity = 0;
+    headline.style.transform = "translateY(-100px) scale(0.8)";
+    headline.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+
+    paragraph.style.opacity = 0;
+    paragraph.style.transform = "translateY(50px)";
+    paragraph.style.transition = "transform 1s ease-out, opacity 1s ease-out";
+
+    setTimeout(() => {
+        headline.style.opacity = 1;
+        headline.style.transform = "translateY(0) scale(1)";
+        paragraph.style.opacity = 1;
+        paragraph.style.transform = "translateY(0)";
+    }, 500);
+
+    setTimeout(() => {
+        headline.style.transition = "transform 0.3s ease";
+        headline.style.transform = "scale(1.1)";
+        setTimeout(() => {
+            headline.style.transform = "scale(1)";
+        }, 300);
+    }, 1500);
+});
+</script>
+</body>
+</html>

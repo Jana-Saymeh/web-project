@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Aguafina+Script&family=Alfa+Slab+One&family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Goblin+One&family=Italianno&family=Lugrasimo&family=Momo+Trust+Display&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="./about.css">
+    <link rel="icon" type="jpeg" href="./download (1).png">
+</head>
+<body>
+    <div class="preview__header">
+        <a href="./web_project.html"><div class="preview__Al-Raha-logo"></div></a> 
+        AL-Raha Company
+    </div>
+
+    <h1> AL-Raha </h1>
+    <nav>
+        <ul id="navigation">
+            <li><a href="./web_project.html">Home</a></li>
+            <li><a href="./about.html">About</a></li>
+            <li><a href="./contact.html">Contact</a></li>
+            <li><a href="./explore.html">Explore</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-container">  
+        <img src="./0a99ae5c8f2ae1519dc2026fb6cc20a3.jpg" alt="car">
+        <div class="text-box">
+            <p>Founded in 2015, Al-Raha Car Rental is a trusted company offering comfortable
+            and reliable cars for every occasion. Based in Hebron, Palestine, we
+            provide a wide range of vehicles — from economy cars to luxury SUVs — all 
+            at affordable prices. Our goal is to make your travel easy, safe, and stress-free.</p>
+        </div>
+
+        <div class="textt"> 
+            <h2>Al-Raha Car Rental</h2>
+            <div class="containers">
+                <div class="card">
+                    <a href="./explore.html#BMW"><img src="./download.png" alt="car1"></a>
+                    <div class="card-text">BMW cars <br> more info</div>
+                </div>
+                <div class="card">
+                    <a href="./explore.html#mercedes"><img src="./08cd58de592f9d8e499207e4c187a06b.jpg" alt="car2"></a>
+                    <div class="card-text">Mercedes cars <br> more info</div>
+                </div>
+                <div class="card">
+                    <a href="./explore.html#audi"><img src="./b1c09cd951df973580358b9e760d4959.jpg" alt="car3"></a>
+                    <div class="card-text">Audi cars<br> more info</div>
+                </div>
+                <div class="card">
+                    <a href="./explore.html#kia"><img src="./84b9638cdd6c6ffa6363b96c4994be71.jpg" alt="car4"></a>
+                    <div class="card-text">Kia cars<br> more info</div>
+                </div>
+            </div>
+
+            <h3><strong>Our Location</strong> </h3>
+            <section class="map-container">
+                <iframe src="https://www.google.com/maps/embed?pb=!1m17!1m12!1m3!1d849.1237551553726!2d35.067456269554576!3d31.647673998384768!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m2!1m1!2zMzHCsDM4JzUxLjYiTiAzNcKwMDQnMDUuMiJF!5e0!3m2!1sen!2s!4v1762946216884!5m2!1sen!2s"></iframe>
+            </section>
+
+            <section class="team-section">
+                <h4>Our Exceptional Team</h4>
+                <p>Meet our outstanding team – a synergy of talent, creativity, and dedication, crafting success together.</p>
+
+                <div class="team-container">
+                    <div class="team-row">
+                        <div class="team-card">
+                            <img src="./5aeba8448609dcf8d90d2f58b0b869da.jpg">
+                            <p>Rahaf Abed</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="./f5044b80fa4132708c44dce07da85f77.jpg">
+                            <p>Jana Saymeh</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="./364b09205b6cab79fec6282b59934c93.jpg" >
+                            <p>Haneen Baradia</p>
+                        </div>
+                    </div>
+                    <div class="team-row-second">
+                        <div class="team-card">
+                            <img src="./6d25283070a0e027aa255a9893647075.jpg">
+                            <p>Raji Baradia</p>
+                        </div>
+                        <div class="team-card">
+                            <img src="./2cf48cf11cc6641af2c0c466dabf05eb.jpg">
+                            <p>Ahmad Masri</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2025 AL-Raha CarRental. All rights reserved.</p>
+    </footer>
+
+    <script>
+    document.addEventListener("DOMContentLoaded", () => {
+        const mainImage = document.querySelector(".page-container img");
+        if(mainImage){
+            mainImage.style.opacity = 0;
+            mainImage.style.transform = "translateX(-200px)";
+            mainImage.style.transition = "all 1s ease-out";
+            setTimeout(() => {
+                mainImage.style.opacity = 1;
+                mainImage.style.transform = "translateX(0)";
+            }, 300);
+        }
+
+        const textBox = document.querySelector(".text-box p");
+        if(textBox){
+            textBox.style.opacity = 0;
+            textBox.style.transform = "translateY(50px)";
+            textBox.style.transition = "all 1s ease-out";
+            setTimeout(() => {
+                textBox.style.opacity = 1;
+                textBox.style.transform = "translateY(0)";
+            }, 600);
+        }
+
+        const h2 = document.querySelector(".textt h2");
+        if(h2){
+            h2.style.opacity = 0;
+            h2.style.transform = "translateY(-50px) scale(0.8)";
+            h2.style.transition = "all 1s ease-out";
+            setTimeout(() => {
+                h2.style.opacity = 1;
+                h2.style.transform = "translateY(0) scale(1)";
+            }, 900);
+        }
+
+        const cards = document.querySelectorAll(".card");
+        cards.forEach((card, index) => {
+            card.style.opacity = 0;
+            card.style.transform = "translateY(50px)";
+            card.style.transition = `all 0.8s ease-out ${index * 0.2}s`;
+            setTimeout(() => {
+                card.style.opacity = 1;
+                card.style.transform = "translateY(0)";
+            }, 1200);
+
+            card.addEventListener("mouseenter", () => {
+                card.style.transform = "translateY(-10px) scale(1.05)";
+                card.style.transition = "transform 0.3s ease";
+            });
+            card.addEventListener("mouseleave", () => {
+                card.style.transform = "translateY(0) scale(1)";
+                card.style.transition = "transform 0.3s ease";
+            });
+        });
+
+        const teamCards = document.querySelectorAll(".team-card");
+        teamCards.forEach((team, i) => {
+            team.style.opacity = 0;
+            team.style.transform = "translateX(-50px)";
+            team.style.transition = `all 0.8s ease-out ${i * 0.3}s`;
+            setTimeout(() => {
+                team.style.opacity = 1;
+                team.style.transform = "translateX(0)";
+            }, 1500);
+        });
+
+        const footer = document.querySelector("footer");
+        if(footer){
+            footer.style.opacity = 0;
+            footer.style.transform = "translateY(20px)";
+            footer.style.transition = "all 1s ease-out";
+            setTimeout(() => {
+                footer.style.opacity = 1;
+                footer.style.transform = "translateY(0)";
+            }, 2000);
+        }
+    });
+    </script>
+</body>
+</html>

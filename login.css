@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+  background-color: #111f2e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    width: 450px;
+    position: relative;
+    transform: translate(-50px);
+    margin-top: -450px;
+}
+
+.box {
+  background-color: rgba(223, 198, 151, 0.459);
+    border: 2px solid wheat;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 0 20px wheat;
+    color: beige;
+    position: absolute;
+    width: 100%;
+    top: 0;
+    transition: 0.3s ease;
+}
+
+.hidden {
+    display: none;
+}
+
+.left {
+    margin-bottom: 25px;
+}
+
+.left h1 {
+    font-size: 32px;
+    margin-bottom: 10px;
+}
+
+.left p {
+    font-size: 14px;
+    opacity: 0.7;
+}
+
+.right h2 {
+    text-align: right;
+    margin-bottom: 15px;
+}
+
+.input-box {
+    position: relative;
+    margin: 20px 0;
+}
+
+.input-box input {
+    width: 100%;
+    padding: 12px;
+    background: transparent;
+    border: none;
+    border-bottom: 2px solid #888;
+    color: beige;
+    font-size: 16px;
+    outline: none;
+}
+
+.input-box label {
+    position: absolute;
+    left: 0;
+    top: 12px;
+    color: #aaa;
+    pointer-events: none;
+    transition: 0.3s;
+}
+
+.input-box input:focus + label,
+.input-box input:valid + label {
+    top: -10px;
+    font-size: 12px;
+    color: wheat;
+}
+
+.icon {
+    position: absolute;
+    right: 0;
+    top: 12px;
+    color: #aaa;
+}
+
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+ background: linear-gradient(to bottom, #ffcf86, wheat);  
+  color: #382e1cc2;
+    font-size: 16px;
+    border-radius: 25px;
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.switch {
+    margin-top: 15px;
+    text-align: center;
+    color: #ccc;
+}
+
+.switch a {
+    color: wheat;
+    text-decoration: none;
+}
